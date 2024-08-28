@@ -1,4 +1,4 @@
 # BlackHorizonShell
 BlackHorizonShell
 
-![bhshell](shell.PNG)
+![bhshell](shell.png)
