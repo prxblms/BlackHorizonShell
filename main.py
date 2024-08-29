@@ -6,7 +6,7 @@ from src.cmds import *
 def HelpMenu():
     DelayPrint(f"""
     - help       - clear
-    - exit xampp
+    - exit xampp - clear temp files
     """)
 
 class main:
