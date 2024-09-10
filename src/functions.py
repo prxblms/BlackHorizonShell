@@ -9,7 +9,7 @@ from colorama import Fore as fg
 
 def DelayPrint(text):
     for x in text:
-        time.sleep(0.03)
+        time.sleep(0.02)
         print(x, end='', flush=True)
 
 def Banner():
