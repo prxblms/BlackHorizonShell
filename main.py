@@ -23,7 +23,8 @@ class main:
             'composer',
             'npm',
             'mkdir',
-            'clear temp files'
+            'clear temp files',
+            'ippinger'
             ]
 
         self.run()
@@ -65,6 +66,10 @@ class main:
                         os.chdir(arg)
                     except:
                         DelayPrint("\n - you need to enter a directory.\n - example: cd DirectoryName.\n")
+
+                elif cmd == 'ippinger':
+                    os.chdir('bin/ippingers')
+                    os.system(f'start py {arg}.py')
 
                 # executa comandos completos.
                 elif cmd in self.command_list:
