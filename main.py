@@ -1,12 +1,12 @@
 import os, sys
 
-from src.funcs import *
-from src.cmds import *
+from src.functions import *
+from src.commands import *
 
 def HelpMenu():
     DelayPrint(f"""
     - help       - clear
-    - exit xampp
+    - exit xampp - clear temp files
     """)
 
 class main:
