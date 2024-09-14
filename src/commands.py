@@ -1,6 +1,20 @@
 import os, glob
+from src.functions import *
 
 username = os.getlogin()
+
+pinger_list = [
+    'prxblms',
+    'sss',
+    'ssss'
+]
+
+def IPPingers(arg):
+    if arg in pinger_list:
+        os.chdir('./bin/ippingers')
+        os.system(f'start py {arg}.py')
+    else:
+        DelayPrint(f"\n   '{arg}' this ip pinger does not exist \n")
 
 def DeleteTempFiles():
     temp_1 = 'C:\\Windows\\Temp'
