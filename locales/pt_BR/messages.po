@@ -1,0 +1,52 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: pt_BR\n"
+
+msgid "00000"
+msgstr "0000"
+
+msgid "you need to enter a directory."
+msgstr "você precisa informar um diretório."
+
+msgid "example: cd DirectoryName."
+msgstr "exemplo: cd NomeDoDiretório."
+
+msgid "this command does not exist"
+msgstr "este comando não existe"
+
+msgid "Ctrl-C was pressed, type"
+msgstr "Ctrl-C foi pressionado, digite"
+
+msgid "type"
+msgstr "digite"
+
+msgid "to exit the tool."
+msgstr "para sair da ferramenta."
+
+msgid "an unexpected error occurred:"
+msgstr "ocorreu um erro inesperado:"
+
+msgid "clean the tool screen"
+msgstr "limpe a tela da ferramenta"
+
+msgid "close the tool"
+msgstr "feche a ferramenta"
+
+msgid "show directory files and folders"
+msgstr "mostre os arquivos e pastas do diretório"
+
+msgid "show normal commands to use"
+msgstr "mostre os comandos normais a serem usados"
+
+msgid "show Black Horizon special commands to use"
+msgstr "mostre os comandos especiais do Black Horizon a serem usados"
+
+msgid "to display the help menu"
+msgstr "para exibir o menu de ajuda"
+
+msgid "this ip pinger does not exist"
+msgstr "este ip pinger não existe"
+
+msgid "all files were deleted successfully..."
+msgstr "todos os arquivos foram excluídos com sucesso..."
