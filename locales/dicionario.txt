@@ -1,0 +1,29 @@
+you need to enter a directory.
+
+example: cd DirectoryName.
+
+this command does not exist
+
+Ctrl-C was pressed, type
+
+type
+
+to exit the tool.
+
+an unexpected error occurred:
+
+clean the tool screen
+
+close the tool
+
+show directory files and folders
+
+show normal commands to use
+
+show Black Horizon special commands to use
+
+to display the help menu
+
+this ip pinger does not exist
+
+all files were deleted successfully...
