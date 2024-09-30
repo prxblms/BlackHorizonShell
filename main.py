@@ -1,81 +1,49 @@
-import os, sys
-from src.banners import *
-from src.functions import *
-from src.commands import *
+import os
+import sys
+from src.commands import DEFAULT_COMMANDS, BH_COMMANDS
+from src.banners import BH_BANNER
+from src.functions import get_input
 
-_lang_ = translator()
-
-class Main:
+class BlackHorizon:
     def __init__(self):
-        # os.chdir('C:\Xzhyan')
-        os.system('cls && title Black Horizon')
-        banner() # ASCII logo of the tool.
+        print(BH_BANNER())
+        self.command_line()
 
-        self.run()
+    def bh_command(self, command):
+        if command == 'ip lookup':
+            os.system('start py bin\iplookup\main.py')
 
-    def run(self):
+    def default_command(self, command):
+        if command == 'help':
+            print(" Help")
+        
+        elif command == 'exit':
+            print("\n finishing...")
+            sys.exit(0)
+
+        elif command == 'clear':
+            os.system('cls')
+
+    def command_line(self):
         while True:
-            try:
-                current_dir = os.getcwd() # current dir.
-                last_dir = os.path.basename(current_dir)
-                print(f'\n {fg.WHITE}dir: \{fg.LIGHTRED_EX}{last_dir}')
-                cmd = input(f" {fg.RED}BlackHorizon~$ {fg.WHITE}")
-                print('')
-                args = cmd.split()
+            command = get_input()
 
-                if cmd in command_list:
-                    
-                    if cmd == 'clear':
-                        os.system('cls')
+            if not command:
+                print("\n please enter a valid command!")
+                continue
 
-                    elif cmd == 'exit':
-                        sys.exit()
+            elif command in DEFAULT_COMMANDS:
+                self.default_command(command)
 
-                    elif cmd == 'help':
-                        helpMenu()
+            elif command in BH_COMMANDS:
+                self.bh_command(command)
 
-                    elif cmd == 'commands':
-                        normalCommads()
-                    
-                    elif cmd == 'ls':
-                        os.system('dir /b')
-
-                    elif cmd == 'clear temp files':
-                        deleteTempFiles()
-
-                    elif cmd == 'ip pinger':
-                        print(pinger_list)
-
-                    else:
-                        os.system(cmd)
-
-                elif len(args) == 2:
-                    cmd = args[0]
-                    arg = args[1]
-
-                    if cmd == 'py' or cmd == 'python':
-                        os.system(f'{cmd} {arg}')
-
-                    elif cmd == 'cd':
-                        try:
-                            os.chdir(arg)
-                        except:
-                            delayPrint(f'\n - {_lang_("you need to enter a directory.")}\n - {_lang_("example: cd DirectoryName.")}\n')
-
-                    elif cmd == 'pinger':
-                        ipPingers(arg)
-
-                    elif cmd == 'setlang':
-                        setLanguage(arg)
-
-                else:
-                    delayPrint(f'\n   [ {cmd} ] {_lang_("this command does not exist")} \n')
-
-            except KeyboardInterrupt: # close tool when Ctrl-C is pressed.
-                delayPrint(f'\n\n  {_lang_("Ctrl-C was pressed, type")} {fg.RED}exit {fg.WHITE}{_lang_("to exit the tool.")}\n ')
-                #sys.exit()
-            except Exception as error:
-                delayPrint(f'{_lang_("an unexpected error occurred:")} {error}')
+            else:
+                print(f"\n [ {command} ] this command was not found! ")
 
 if __name__ == '__main__':
-    Main()
+    try:
+        BlackHorizon()
+    except KeyboardInterrupt:
+        print("\n finishing...")
+        sys.exit(0)
