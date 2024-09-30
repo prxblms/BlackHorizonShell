@@ -11,7 +11,7 @@ class BlackHorizon:
 
     def bh_command(self, command):
         if command == 'ip lookup':
-            os.system('start py bin\iplookup\main.py')
+            print(" IP Lookup")
 
     def default_command(self, command):
         if command == 'help':
