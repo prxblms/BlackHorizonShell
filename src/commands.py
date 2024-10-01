@@ -1,7 +1,9 @@
 DEFAULT_COMMANDS = [
     'help',
     'exit',
-    'clear'
+    'clear',
+    'cmds',
+    'bh cmds'
 ]
 
 BH_COMMANDS = [
