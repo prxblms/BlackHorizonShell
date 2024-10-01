@@ -3,9 +3,10 @@ import geoip2.database
 import geoip2.errors
 from colorama import Fore as fg
 
-ASN_DB = 'dbs/GeoLite2-ASN.mmdb'
-COUNTRY_DB = 'dbs/GeoLite2-Country.mmdb'
-CITY_DB = 'dbs/GeoLite2-City.mmdb'
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+ASN_DB = os.path.join(BASE_DIR, 'dbs', 'GeoLite2-ASN.mmdb')
+COUNTRY_DB = os.path.join(BASE_DIR, 'dbs', 'GeoLite2-Country.mmdb')
+CITY_DB = os.path.join(BASE_DIR, 'dbs', 'GeoLite2-City.mmdb')
 
 def banner():
     print(f'''{fg.RED}
