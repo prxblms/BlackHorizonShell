@@ -46,7 +46,7 @@ class BlackHorizon:
             command = get_input()
 
             if not command:
-                print(f"\n {fg.LIGHTRED_EX}please enter a valid command!")
+                print(f"\n {fg.LIGHTWHITE_EX}please enter a valid command!")
                 continue
 
             elif command in DEFAULT_COMMANDS:
