@@ -32,7 +32,7 @@ class IPLookup:
         print(f"\n {fg.RED}┌───ͼ 27prxblms ͽ")
         ip = input(F" {fg.RED}└─ͼ {fg.LIGHTWHITE_EX}enter a {fg.LIGHTRED_EX}IP {fg.LIGHTWHITE_EX}or {fg.LIGHTRED_EX}Host: {fg.LIGHTGREEN_EX}")
         if not ip:
-            print("\n {fg.LIGHTWHITE_EX}please enter a valid IP or Host!")
+            print(f"\n {fg.LIGHTWHITE_EX}please enter a valid IP or Host!")
 
         elif ip == 'exit':
             print("\n {fg.LIGHTWHITE_EX}Finishing...")
