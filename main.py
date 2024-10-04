@@ -1,8 +1,9 @@
 import os
 import sys
+import time
 from src.commands import DEFAULT_COMMANDS, BH_COMMANDS
-from src.banners import BH_BANNER, HELP_BANNER, BH_CMDS_BANNER, DEFAULT_CMDS_BANNER
-from src.functions import get_input
+from src.banners import *
+from src.functions import *
 from colorama import Fore as fg
 
 class BlackHorizon:
@@ -12,11 +13,13 @@ class BlackHorizon:
 
     # Special commands function.
     def bh_command(self, command):
+        args = command.split()
+
         if command == 'ip lookup':
             os.system('start python bin/iplookup/iplookup.py')
 
         elif command == 'ip pinger':
-            os.system('start python bin/ippingers/prxblms.py')
+            list_ip_pingers()
 
     # Default commands function.
     def default_command(self, command):
